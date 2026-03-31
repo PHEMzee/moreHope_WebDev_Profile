@@ -1,0 +1,25 @@
+{
+  "name": "morehope_webdev_profile",
+  "version": "1.0.0",
+  "description": "moreHOPE web development profile",
+  "license": "ISC",
+  "author": "moreHOPE",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "bootstrap": "^5.3.8",
+    "dotenv": "^17.3.1",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "jquery": "^4.0.0",
+    "jquery-migrate": "^4.0.0",
+    "jsdom": "^29.0.1",
+    "lodash": "^4.17.23",
+    "mongoose": "^9.3.3",
+    "s": "^1.0.0"
+  }
+}

@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+}
+
+.about-img{
+    background-image: url("/img/IMG-20250121-WA0041.jpg");
+    background-position: 1% 60%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.about-overlay{
+    background-color: rgba(117, 117, 254, 0.85);
+h1{
+    margin: 0;
+    margin-left: .5em;
+    padding: 1.5rem 0;
+    font-weight: bold;
+    font-size: 48px;
+    color: #fff;
+}
+}
+
+
+
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: justify;
+}
+.about-content{
+    h2{
+        color: #7575fe;
+    }
+    background: linear-gradient(90deg, #7575fe 40%, #70d37736 40%);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 3rem 2rem 5rem;
+}
+.about-intro{
+    text-wrap: nowrap;
+    min-width: min-content;
+    margin-top: 2rem;
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: .5rem;
+    box-shadow: inset 0px -5px 10px 4px #a9a7a8;
+    border-radius: 1rem;
+}
+.about-img-text{
+    display: grid;
+    grid-template-columns: 40% minmax(60%, 2fr);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+@media (max-width: 768px) {
+.about-img-text{
+    padding: 20px 0 0;
+    grid-template-columns: 1fr;
+    background-color: #f7f7f7;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.about-content{
+    padding: 0rem 1rem 1rem;
+    background-color: #7575fe;
+}
+.about-intro{
+    text-wrap: nowrap;
+    width: 15rem;
+    position: absolute;
+    z-index: 0;
+    margin-top: -3rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.about-text{
+    margin-top: 3rem;
+    line-height: normal;
+    background-color: #f7f7f7;
+    padding: 20px 15px 40px 15px;
+    border-radius: 10px;
+}
+}
+.about-image{
+    img{
+        border-radius: 10px;
+    }
+    align-content: center;
+    justify-items: center;
+    /* min-width: -webkit-fill-available; */
+    height: -webkit-fill-available;
+}
+.about-btn{
+    display: inline-block;
+    color: rgb(117 117 254);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: .5rem;
+    border: solid 1px rgb(117 117 254);
+    margin-top: .5rem;
+}
+a:hover{
+    color: #fff;
+    background-color: rgb(117 117 254);
+    border: solid 1px rgb(117 117 254 / 85%);
+}
+.tech-decor{
+    font-variant: small-caps;
+    font-weight: bolder;
+}
+.point-icon{
+    position: absolute;
+    transform: rotate(20deg);
+    margin-left: 8.3rem;
+    font-size: -webkit-xxx-large;
+    margin-top: -2.7rem;
+    display: block;
+}

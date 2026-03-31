@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+    .intro{
+      background: linear-gradient(180deg, rgb(1 22 45) 60%, #70d377 60%);
+    }
+    .intro-text{
+      margin: 50px;
+      align-self: baseline;
+    }
+    /* .skills-sec{
+    gap: 50px;
+    padding: inherit;
+    }   */
+    .skills-grid{
+      grid-template-columns: 1fr;
+    }
+    .sub-footer{
+      gap: 10px;
+    }
+
+    .footer-text{
+      width: 100% !important;
+    }
+    .technical-skills{
+      /* max-width: 350px !important; */
+    }
+    .intro-sec{
+      background: linear-gradient(150deg, rgb(1 22 45) 55%, #70d377 50%) !important;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+}
