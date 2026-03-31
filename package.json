@@ -19,6 +19,7 @@
     "jquery-migrate": "^4.0.0",
     "jsdom": "^29.0.1",
     "lodash": "^4.17.23",
+    "mongodb": "^7.1.1",
     "mongoose": "^9.3.3",
     "s": "^1.0.0"
   }

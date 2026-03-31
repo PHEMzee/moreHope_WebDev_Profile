@@ -23,8 +23,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 const PORT = process.env.PORT || 3000;
-
-mongoose.connect("mongodb://localhost:27017/prtFolioDB");
+mongoose.connect("mongodb+srv://cluster0.wagkfi6.mongodb.net/prtFolioDB?retryWrites=true&w=majority");
 
 const userSchema = new mongoose.Schema({});
 
