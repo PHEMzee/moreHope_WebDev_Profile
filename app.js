@@ -47,8 +47,18 @@ app.use(
   }),
 );
 
+
 app.get("/", async (req, res) => {
-  res.render("home", { year: year });
+    res.render("home", {year: year})
+});
+app.get("/alien", async (req, res) => {
+    res.render("alien", {year: year})
+});
+app.get("/login", async (req, res) => {
+    res.render("login", {year: year})
+});
+app.get("/about", async (req, res) => {
+    res.render("about", {year: year})
 });
 
 app.listen(PORT, () => {

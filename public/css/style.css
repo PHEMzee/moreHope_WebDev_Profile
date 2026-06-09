@@ -27,6 +27,15 @@ font-family: cursive;
     width: 7rem;
     height: auto;
   }
+  .img-logo{
+    display: flex;
+    align-items: center;
+  }
+  .img-logo:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    background-color: 'none';
+  }
 .sec-title{
     color: #70d377;
 }
