@@ -12,14 +12,16 @@ h1{
     justify-content: space-evenly;
     align-items: center;
     min-height: 100vh;
+    padding: 1.5rem 3rem;
 }
 
 .project-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.45fr 1fr;
     width: -webkit-fill-available;
     padding: 0 3rem;
     gap: 1rem;
+    align-items: center;
 }
 @media (max-width: 480px){
     .project-grid{
@@ -52,7 +54,7 @@ h1{
 .project-img-sec{
     display: inline-block;
     min-width: 15rem;
-    max-width: 20rem;
+    max-width: 32rem;
     min-height: 20rem;
     border-radius: 2rem;
     padding: 1rem;

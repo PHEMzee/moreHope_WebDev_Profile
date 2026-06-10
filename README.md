@@ -26,8 +26,7 @@ npm install
 ```
 
 3. Create a `.env` file if you need environment-specific values (optional):
-
-```bash
+ ```bash
 PORT=3000
 ```
 

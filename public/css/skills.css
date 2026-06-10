@@ -1,69 +1,80 @@
 .skills {
-    background-color: #70d377;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-    padding: 20px;
+  background-color: #70d377;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  padding: 20px;
 }
-.sub-skill{
-  h2{
+
+.sub-skill {
+  h2 {
     color: #70d377;
   }
+
   width: 90vw;
   background-color: aliceblue;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 2rem 0 3rem;
 }
-.skills-grid{
+
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
-  width: min-content;
-  /* text-wrap: nowrap; */
+  grid-template-columns: min-content 1fr;
+  gap: 2.5rem;
+  width: 100%;
   align-content: center;
   justify-content: space-evenly;
   align-items: baseline;
   justify-items: center;
   align-self: center;
+  padding: 0 1.5rem;
 }
-.skill-title{
+
+.skill-title {
   margin: 0 3rem 1rem;
   color: #9C2701;
 }
+
 @media (max-width: 768px) {
-  .skills-grid{
+  .skills-grid {
     grid-template-columns: 1fr;
     gap: auto;
   }
-  .sub-skill{
+
+  .sub-skill {
     padding: 2rem;
     width: 100vw;
   }
-  .skill-title{
+
+  .skill-title {
     margin: 0;
   }
 }
+
 .card {
-    border: none !important;
-    justify-self: center;
-    width: fit-content;
-  }
-  
-.card-title{
+  border: none !important;
+  justify-self: center;
+  width: fit-content;
+}
+
+.card-title {
   font-variant: small-caps;
   vertical-align: sub;
 }
-.skill-logos{
+
+.skill-logos {
   border: none !important;
   padding: 5px !important;
 }
-.tech-skill{
+
+.tech-skill {
   align-items: end;
   background-color: #ffffff;
   margin-bottom: 2px;
@@ -76,7 +87,6 @@
   padding: 20px 10px;
   background-color: #f0f8ff;
   border: none;
-  border-radius: 5%;
   box-shadow: 0 0 10px rgba(57, 31, 78, 0.5);
 }
 
@@ -104,10 +114,19 @@
   color: #333;
 }
 
-.soft-skill{
+.soft-skill {
   padding: 0 20px;
 }
-.skill-icon{
+
+.skill-icon {
   display: inline-block;
   margin-right: 5px;
 }
+
+.cert-skill {
+  text-wrap: wrap;
+  li {
+  text-indent: -9px;
+}}
+
+.sub-soft-skill {}
