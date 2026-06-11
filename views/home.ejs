@@ -297,27 +297,108 @@
 
 <section id="project">
   <div class="sub-project">
-    <div style="align-self: flex-start; margin-left: 3rem">
-      <span style="font-family: monospace; font-size: xx-large"
-        >What I've been up to!</span
-      >
+    <div class="project-heading">
+      <span>What I've been up to!</span>
     </div>
-    <div class="project-grid">
-      <div class="project-text">
-        <div>
-          <h1>Title</h1>
-          <p>Description</p>
-        </div>
-        <a class="project-btn" href="http://">Navigate here</a>
+    <div class="project-carousel">
+      <button
+        class="carousel-control"
+        id="projectPrev"
+        aria-label="Previous project">
+        ←
+      </button>
+      <div class="project-slide" id="projectSlide">
+        <article class="project-card">
+          <img
+            id="projectImage"
+            src="/img/morehope.png"
+            alt="Project screenshot" />
+          <div class="project-card-content">
+            <h2 id="projectTitle">Project Title</h2>
+            <p id="projectDescription">Project description goes here.</p>
+            <a
+              id="projectLink"
+              class="project-btn"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Visit App</a
+            >
+          </div>
+        </article>
       </div>
-      <div class="project-img-sec">
-        <div class="project-img">
-          <img src="" alt="screenshot" />
-        </div>
-      </div>
+      <button
+        class="carousel-control"
+        id="projectNext"
+        aria-label="Next project">
+        →
+      </button>
+    </div>
+    <div class="project-indicator">
+      <span id="projectCounter">1 / 3</span>
     </div>
   </div>
 </section>
+
+<script>
+  const projectData = [
+    {
+      title: "moreHOPE Web Portfolio",
+      description:
+        "A responsive personal portfolio built with modern HTML, CSS, and JavaScript.",
+      image: "/img/morehope.png",
+      url: "https://example.com/project-1",
+      alt: "moreHOPE portfolio screenshot",
+    },
+    {
+      title: "Web Dev Landing",
+      description:
+        "A clean landing page showcasing services, skills, and contact details.",
+      image: "/img/webdev.png",
+      url: "https://example.com/project-2",
+      alt: "Web Dev landing page screenshot",
+    },
+    {
+      title: "Branch Product Showcase",
+      description:
+        "An interactive showcase highlighting project features and navigation.",
+      image: "/img/branch.png",
+      url: "https://example.com/project-3",
+      alt: "Branch project screenshot",
+    },
+  ];
+
+  let currentProjectIndex = 0;
+
+  const titleEl = document.getElementById("projectTitle");
+  const descriptionEl = document.getElementById("projectDescription");
+  const imageEl = document.getElementById("projectImage");
+  const linkEl = document.getElementById("projectLink");
+  const counterEl = document.getElementById("projectCounter");
+
+  function renderProject(index) {
+    const project = projectData[index];
+    titleEl.textContent = project.title;
+    descriptionEl.textContent = project.description;
+    imageEl.src = project.image;
+    imageEl.alt = project.alt;
+    linkEl.href = project.url;
+    counterEl.textContent = `${index + 1} / ${projectData.length}`;
+  }
+
+  document.getElementById("projectPrev").addEventListener("click", () => {
+    currentProjectIndex =
+      (currentProjectIndex - 1 + projectData.length) % projectData.length;
+    renderProject(currentProjectIndex);
+  });
+
+  document.getElementById("projectNext").addEventListener("click", () => {
+    currentProjectIndex = (currentProjectIndex + 1) % projectData.length;
+    renderProject(currentProjectIndex);
+  });
+
+  renderProject(currentProjectIndex);
+</script>
 
 <section id="contact" class="contact-sec">
   <div class="sub-contact-sec">
@@ -369,7 +450,9 @@
       <div class="contact-us">
         <span style="font-weight: bold">LET'S MEET</span>
         <div class="social-icons">
-          <a href="http://www.facebook.com/morehope.webdev" style="text-decoration: none"
+          <a
+            href="http://www.facebook.com/morehope.webdev"
+            style="text-decoration: none"
             ><img
               src="https://cdn-icons-png.freepik.com/256/5968/5968764.png?uid=R180883942&ga=GA1.1.1495100215.1707591332&semt=ais_hybrid"
               alt="facebook"
