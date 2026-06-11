@@ -1,5 +1,6 @@
 .skills {
-  background-color: #70d377;
+  background: linear-gradient(135deg, #eef2ff, #ffffff); 
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,19 +11,18 @@
 }
 
 .sub-skill {
-  h2 {
-    color: #70d377;
-  }
-
-  width: 90vw;
-  background-color: aliceblue;
+  width: 100%;
+  background-color: #F0F8FF;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0 3rem;
+  padding: 2rem 1.5rem 3rem;
 }
+sub-skill  h2 {
+    color: #2563eb;
+  }
 
 .skills-grid {
   display: grid;
@@ -125,8 +125,10 @@
 
 .cert-skill {
   text-wrap: wrap;
-  li {
-  text-indent: -9px;
-}}
 
-.sub-soft-skill {}
+  li {
+    text-indent: -9px;
+  }
+}
+
+/* .sub-soft-skill {} */

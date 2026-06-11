@@ -1,66 +1,39 @@
 import dotenv from "dotenv";
-import { JSDOM } from "jsdom";
-import { jQueryFactory } from "jquery/factory";
-import lodash from "lodash";
-import ejs from "ejs";
-import mongoose from "mongoose";
 import express from "express";
-// import path from "path";
 
-const { window } = new JSDOM( "" );
-const $ = jQueryFactory(window);
+dotenv.config();
 const app = express();
-const result = dotenv.config();
-if (result.error) {
-  throw result.error;
-}
+const PORT = process.env.PORT || 3000;
 
+app.disable("x-powered-by");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 app.use(express.static("public"));
-
 app.set("view engine", "ejs");
+app.locals.year = new Date().getFullYear();
 
-const PORT = process.env.PORT || 3000;
-mongoose.connect("mongodb+srv://cluster0.wagkfi6.mongodb.net/prtFolioDB?retryWrites=true&w=majority");
+const renderPage = (view) => (req, res) => res.render(view);
 
-const userSchema = new mongoose.Schema({});
+app.get("/", renderPage("home"));
+app.get("/alien", renderPage("alien"));
+app.get("/login", renderPage("login"));
+app.get("/about", renderPage("about"));
+app.get("/work", renderPage("work"));
 
-const User = new mongoose.model("User", userSchema);
-
-const year = new Date().getFullYear();
-const date = new Date().toLocaleDateString("en-us", {
-  weekday: "long",
-  year: "numeric",
-  month: "short",
-  day: "numeric",
+app.post("/login", (req, res) => {
+  console.log("Login request:", req.body);
+  res.redirect("/login");
 });
 
-app.use(
-  express.static("views", {
-    setHeaders: (res, path) => {
-      if (path.endsWith(".js")) {
-        res.set("Content-Type", "application/javascript");
-      }
-    },
-  }),
-);
+app.post("/signup", (req, res) => {
+  console.log("Signup request:", req.body);
+  res.redirect("/login");
+});
 
-
-app.get("/", async (req, res) => {
-    res.render("home", {year: year})
-});
-app.get("/alien", async (req, res) => {
-    res.render("alien", {year: year})
-});
-app.get("/login", async (req, res) => {
-    res.render("login", {year: year})
-});
-app.get("/about", async (req, res) => {
-    res.render("about", {year: year})
+app.use((req, res) => {
+  res.status(404).send("Page not found");
 });
 
 app.listen(PORT, () => {
-  console.log("moreHOPE WebDev PORT: " + PORT);
+  console.log(`moreHOPE WebDev PORT: ${PORT}`);
 });
