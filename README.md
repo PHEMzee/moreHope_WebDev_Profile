@@ -37,10 +37,22 @@ PORT=3000
 Start the server with:
 
 ```bash
-node app.js
+npm start
 ```
 
 Then open `http://localhost:3000` in your browser.
+
+## Deployment
+
+This project is ready for deployment on Node-friendly hosts such as Render, Heroku, or Railway.
+
+1. Ensure environment variables are configured in your host dashboard:
+   - `PORT` (optional, fallback is `3000`)
+   - `MONGODB_URI` or other database settings if you connect to MongoDB
+2. Deploy using the repository root.
+3. If using Heroku, the included `Procfile` will start the app with `node app.js`.
+
+> Note: Keep sensitive values such as database URIs and API keys out of version control by storing them in environment variables or secrets.
 
 ## Project structure
 
