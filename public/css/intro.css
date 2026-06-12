@@ -1,5 +1,8 @@
 .intro {
-    background: linear-gradient(110deg, rgb(1 22 45) 55%, #70d377 50%);
+    background:
+        radial-gradient(circle at top left, rgba(33, 150, 243, 0.16), transparent 35%),
+        linear-gradient(110deg, rgb(1 22 45) 55%, #70d377 50%);
+
     min-height: 100vh;
     display: flex;
     align-content: center;

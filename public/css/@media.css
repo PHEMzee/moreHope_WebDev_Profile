@@ -1,6 +1,8 @@
 @media (max-width: 768px) {
     .intro{
-      background: linear-gradient(180deg, rgb(1 22 45) 60%, #70d377 60%);
+      background:
+          radial-gradient(circle at top left, rgba(33, 150, 243, 0.16), transparent 35%),
+          linear-gradient(180deg, rgb(1 22 45) 60%, #70d377 60%);
     }
     .intro-text{
       margin: 50px;

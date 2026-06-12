@@ -1,8 +1,10 @@
 
 .footer-sub {
   padding: 4rem 1.5rem;
-  background-color: #031021;
-  color: #dde5f1;
+  background: radial-gradient(circle at top left, rgba(33, 150, 243, 0.16), transparent 35%),
+    linear-gradient(135deg, #050a19 0%, #0b1632 100%);
+  
+    color: #dde5f1;
 }
 
 .footer-sub .container {

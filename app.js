@@ -15,10 +15,8 @@ app.locals.year = new Date().getFullYear();
 const renderPage = (view) => (req, res) => res.render(view);
 
 app.get("/", renderPage("home"));
-app.get("/alien", renderPage("alien"));
+app.get("/pricing", renderPage("pricing"));
 app.get("/login", renderPage("login"));
-app.get("/about", renderPage("about"));
-app.get("/work", renderPage("work"));
 
 app.post("/login", (req, res) => {
   console.log("Login request:", req.body);
