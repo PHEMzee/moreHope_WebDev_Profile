@@ -6,9 +6,6 @@
   "author": "moreHOPE",
   "type": "module",
   "main": "app.js",
-  "engines": {
-    "node": ">=18.0.0"
-  },
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"

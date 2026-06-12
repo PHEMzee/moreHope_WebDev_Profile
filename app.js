@@ -32,6 +32,12 @@ app.use((req, res) => {
   res.status(404).send("Page not found");
 });
 
-app.listen(PORT, () => {
-  console.log(`moreHOPE WebDev PORT: ${PORT}`);
-});
+const isVercel = process.env.VERCEL === "1";
+
+if (!isVercel) {
+  app.listen(PORT, () => {
+    console.log(`moreHOPE WebDev PORT: ${PORT}`);
+  });
+}
+
+export default app;
