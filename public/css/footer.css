@@ -32,12 +32,6 @@
   line-height: 1.8;
 }
 
-.footer-contact-icon {
-  min-width: 1.6rem;
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
 .footer-contact a {
   color: #bfdbfe;
   text-decoration: none;
@@ -90,7 +84,7 @@
 .footer-divider {
   width: 45px;
   margin: 0 auto 1.25rem;
-  border-top: 1px dotted rgba(255, 255, 255, 0.3);
+  border-top: 8px dotted rgba(255, 255, 255, 0.3);
 }
 
 .footer-last p {
