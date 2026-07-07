@@ -35,7 +35,7 @@ font-family: cursive;
     color: #70d377;
 }
 section{
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 0;
     margin: 0;
     border-bottom: solid 4px #2563eb;
