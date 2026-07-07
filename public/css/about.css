@@ -91,11 +91,14 @@ h1{
     }
     align-content: center;
     justify-items: center;
-    /* min-width: -webkit-fill-available; */
     height: -webkit-fill-available;
 }
+
+.contact-about{
+        display: inline-block;
+
+}
 .about-btn{
-    display: inline-block;
     color: #2563eb;
     text-decoration: none;
     font-size: 1.5rem;
@@ -111,12 +114,4 @@ a:hover{
 .tech-decor{
     font-variant: small-caps;
     font-weight: bolder;
-}
-.point-icon{
-    position: absolute;
-    transform: rotate(20deg);
-    margin-left: 8.3rem;
-    font-size: -webkit-xxx-large;
-    margin-top: -2.7rem;
-    display: block;
 }
